@@ -1,10 +1,11 @@
 import Chai from './chai'
 
 function App() {
+  const username = 'It is coffee time'
   return (
     <>
       <Chai/>
-      <p>Hello World!</p>
+      <p>Hello World! {username}</p>
       <h3>Bonjour</h3>
     </>
     
