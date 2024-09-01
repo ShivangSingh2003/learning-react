@@ -41,11 +41,11 @@ function App() {
               White
             </button>
             <button className="outline-none px-4 py-1 rounded-full text-white shadow-lg" style={{backgroundColor: "purple"}}
-            onClick={() => setColor("red")}>
+            onClick={() => setColor("purple")}>
               Purple
             </button>
             <button className="outline-none px-4 py-1 rounded-full text-black shadow-lg" style={{backgroundColor: "pink"}}
-            onClick={() => setColor("red")}>
+            onClick={() => setColor("pink")}>
               Pink
             </button>
           </div>
