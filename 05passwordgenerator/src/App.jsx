@@ -15,7 +15,10 @@ function App() {
     passwordRef.current?.select()
     // passwordRef.current?.setSelectionRange(0,4)
     window.navigator.clipboard.writeText(password)
+    
   }, [password])
+
+
 
   const passwordGenerator = useCallback(() => {  //memoization...optimization using cache
     let pass = ""
@@ -33,7 +36,8 @@ function App() {
     setPassword(pass)
   }, [length, addNums, addSplChars, setPassword])
 
-  useEffect( ()=> {passwordGenerator()}, [length, addNums, addSplChars, passwordGenerator])
+  useEffect( () => {passwordGenerator()}, [length, addNums, addSplChars, passwordGenerator])
+  useEffect( () => {setColor('blue')}, [password]);
 
 
 
@@ -84,3 +88,6 @@ function App() {
 }
 
 export default App
+
+
+//Problem faced : How to revert the copy button back to blue, when a new password is generated after it changes to green after being clicked to copy.
